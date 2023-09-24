@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SalesWebMvc.Models;
+using SalesWebMvc.Models.ViewModels;
 using System.Diagnostics;
 
 namespace SalesWebMvc.Controllers
@@ -20,6 +20,10 @@ namespace SalesWebMvc.Controllers
 
         public IActionResult Privacy()
         {
+            ViewData["Message"] = "Aprendendo ASP.NET ";
+            ViewData["email"] = "kennedyemanoel199@gmail.com";
+            ViewData["Nome"] = "Kennedy Emanoel da Silveira Barbosa";
+
             return View();
         }
 
