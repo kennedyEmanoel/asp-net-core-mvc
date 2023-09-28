@@ -3,11 +3,13 @@ using Microsoft.Extensions.DependencyInjection;
 using SalesWebMvc.Data;
 using SalesWebMvc.Models;
 using System;
+using SalesWebMvc.Services;
 
 // consider this section as ConfigureServices()
 var builder = WebApplication.CreateBuilder(args);
 {
     builder.Services.AddScoped<SeedingService>();
+    builder.Services.AddScoped<SellerService>();
 }
 
 builder.Services.AddDbContext<SalesWebMvcContext>
